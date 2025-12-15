@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccuRate Support</title>
+    <style>
+        :root {
+            /* Palette inspired by the app */
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #2bee6c;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            color: var(--accent-color);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        p {
+            color: #cbd5e1;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        .email-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            color: #cbd5e1;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* FAQ Accordion */
+        details {
+            background-color: var(--card-bg);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        details[open] {
+            border-color: var(--border-color);
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none; /* Hide default arrow */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-content {
+            padding: 20px;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: var(--accent-color);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 15px; }
+            .contact-box { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AccuRate Support</h1>
+            <p>Efficient Time & Earnings Tracking for Freelancers</p>
+        </header>
+
+        <section class="intro">
+            Welcome to the support page for AccuRate. We are dedicated to helping you track your time and earnings efficiently. If you are experiencing issues, please check the FAQ below or contact us directly.
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-box">
+                <p>If you couldn't find the answer in the FAQ below, please email our support team. We aim to respond within 24–48 hours.</p>
+                
+                <a href="mailto:holyshevskyi.a@gmail.com" class="email-link">📧 holyshevskyi.a@gmail.com</a>
+
+                <p style="margin-top: 20px; font-weight: 600; color: white;">Please include the following to help us solve the issue faster:</p>
+                <ul>
+                    <li>Your device model (e.g., iPhone 14)</li>
+                    <li>iOS version</li>
+                    <li>A description of the problem</li>
+                    <li>Screenshots (if applicable)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <details>
+                <summary>1. How do I restore my PRO purchase?</summary>
+                <div class="faq-content">
+                    <p>If you have purchased the PROductive subscription but still see ads or cannot access PRO features (like CSV export), you may need to restore your purchase:</p>
+                    <ol>
+                        <li>Open the AccuRate app.</li>
+                        <li>Go to the <strong>Settings</strong> screen (gear icon).</li>
+                        <li>Tap the <strong>"Restore Purchases"</strong> button (if available) or tap the "Go PROductive" card again.</li>
+                    </ol>
+                    <p>The app will check your Apple ID for existing subscriptions and unlock the features automatically. You will not be charged again.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>2. How do I export my data?</summary>
+                <div class="faq-content">
+                    <p>CSV Export is a PRO feature.</p>
+                    <ol>
+                        <li>Go to the <strong>History (Sessions)</strong> screen.</li>
+                        <li>Tap the <strong>Share icon</strong> (top right corner).</li>
+                        <li>Choose where you want to save or send your CSV file (e.g., Save to Files, Email, AirDrop).</li>
+                    </ol>
+                </div>
+            </details>
+
+            <details>
+                <summary>3. I forgot to stop the timer. Can I edit a session?</summary>
+                <div class="faq-content">
+                    <p>Currently, sessions cannot be edited after they are saved. We are working on an "Edit Session" feature which will be available in the next update.</p>
+                    <p>For now, you can delete the incorrect session and start a new one, or manually track the difference.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>4. How is the "Earned Money" calculated?</summary>
+                <div class="faq-content">
+                    <p>The app calculates your earnings using the simple formula:</p>
+                    <p><code>Elapsed Time (Hours) × Hourly Rate = Total Earnings</code></p>
+                    <p>The calculation happens in real-time, down to the second.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>5. Why do I see ads?</summary>
+                <div class="faq-content">
+                    <p>AccuRate is a free-to-use app supported by advertisements.</p>
+                    <p>To remove ads and unlock unlimited session history, you can upgrade to <strong>AccuRate PRO</strong> via the Settings screen.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>6. How do I delete my data?</summary>
+                <div class="faq-content">
+                    <p>All your session data is stored securely on your device (and in the cloud if you are logged in).</p>
+                    <ul>
+                        <li><strong>To delete a specific session:</strong> (Feature coming soon in v1.1).</li>
+                        <li><strong>To delete all data:</strong> Simply uninstalling the app will remove local data. If you wish to request a complete deletion of any cloud-associated data, please contact us at the email above.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <section id="privacy">
+            <h2>Privacy Policy</h2>
+            <div class="contact-box" style="background-color: transparent; border: 1px dashed var(--border-color);">
+                <p>We value your privacy. You can read our full Privacy Policy here:</p>
+                <a href="#">Read Privacy Policy</a> 
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Oleksandr Holyshevskyi. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
